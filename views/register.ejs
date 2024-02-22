@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+</head>
+
+<body>
+    <section>
+        <div>
+            <div>
+                <h1>
+                    Register
+                </h1>
+                <form action="/register" method="POST">
+                    <div>
+
+                        <% if (messages.error) { %>
+                            <div class="alert alert-danger">
+                              <strong><%= messages.error %> </strong>
+                            </div>
+                          <% } %> 
+                          
+                        <div>
+                            <label class="form-label" for="form3Example2">Full Name</label>
+                            <input type="text" name="name" id="form3Example2" class="form-control" />
+                           
+                            <div>
+                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" name="email" id="form3Example3" class="form-control" />
+                               
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" name="password" id="form3Example4" class="form-control" />
+                                
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                    Sign up
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <p>Already have an account?<a href="login">Log In</a></p>
+    </section>
+
+</body>
+
+</html>
